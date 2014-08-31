@@ -1,5 +1,5 @@
 # Component Path Configuration
-export TARGET_PRODUCT
+export TARGET_PRODUCT := beagleboneblack
 export ANDROID_INSTALL_DIR := $(patsubst %/,%, $(dir $(realpath $(lastword $(MAKEFILE_LIST)))))
 export ANDROID_FS_DIR := $(ANDROID_INSTALL_DIR)/out/target/product/$(TARGET_PRODUCT)/android_rootfs
 export PATH :=$(PATH):$(ANDROID_INSTALL_DIR)/prebuilts/gcc/linux-x86/arm/arm-gnueabihf-4.7/bin

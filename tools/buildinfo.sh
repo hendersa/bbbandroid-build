@@ -42,4 +42,8 @@ echo "ro.build.description=$PRIVATE_BUILD_DESC"
 echo "ro.build.fingerprint=$BUILD_FINGERPRINT"
 echo "ro.build.characteristics=$TARGET_AAPT_CHARACTERISTICS"
 
+# BBBAndroid additions
+echo "debug.egl.hw=0"
+echo "video.accelerate.hw=0"
+
 echo "# end build properties"

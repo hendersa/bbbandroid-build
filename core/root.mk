@@ -9,7 +9,6 @@ kernel_not_configured := $(wildcard kernel/.config)
 
 ifeq ($(TARGET_PRODUCT), beagleboneblack)
 CLEAN_RULE = kernel_clean clean
-else
 rowboat: kernel_build
 endif
 
@@ -19,7 +18,8 @@ ifeq ($(TARGET_PRODUCT), beagleboneblack)
 	$(MAKE) -C kernel ARCH=arm am335x_evm_android_defconfig
 endif
 endif
-	$(MAKE) -C kernel ARCH=arm CROSS_COMPILE=$(CC_PREFIX) uImage
+	$(MAKE) -C kernel ARCH=arm CROSS_COMPILE=$(CC_PREFIX) zImage
+	$(MAKE) -C kernel ARCH=arm CROSS_COMPILE=$(CC_PREFIX) dtbs
 
 kernel_clean:
 	$(MAKE) -C kernel ARCH=arm  distclean

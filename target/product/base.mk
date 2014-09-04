@@ -40,6 +40,7 @@ PRODUCT_PACKAGES += \
     fsck_msdos \
     gralloc.default \
     gzip \
+    i2c-tools \
     ime \
     init \
     input \
